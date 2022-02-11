@@ -5,4 +5,7 @@ const app = express();
 
 app.use('/', router);
 
-app.listen(4000, () => console.log('server ready'));
+const port = process.env.PORT || 4000;
+const host = 'localhost' || '0.0.0.0';
+
+app.listen(port, host, () => console.log('server ready'));
